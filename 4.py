@@ -233,14 +233,7 @@ def score(card):
 	return total
 
 for i in data:
-	bonus = 0
-	for j in i[0]:
-		if j in i[1]:
-			if bonus == 0:
-				bonus+=1
-			else:
-				bonus*=2
-	total+=bonus
+	total+=math.floor(2**((score(i))-1))
 
 print(total)
 
