@@ -175,12 +175,12 @@ def check(pos,dirt):
 	return False
 def addvec(a,b):
 	return (a[0]+b[0],a[1]+b[1])
-locations = []
 def inv(a):
 	return (a[0]*-1,a[1]*-1)
 def rotate(a):
 	return (a[1],a[0]*-1)
 
+locations = []
 for x,i in enumerate(mods):
 	if check(start,i):
 		locations.append((addvec(start,i),inv(i),x))
@@ -189,7 +189,6 @@ AAA = locations[0][2]
 BBB = locations[1][2]
 
 steps = 0
-flag = True
 visits = [start,locations[0][0],locations[1][0]]
 checksquaresa = []
 checksquaresb = []
@@ -211,11 +210,10 @@ while len(locations)!=0:
 		for j in directions[data[i[0][1]][i[0][0]]]:
 			if j == i[1]:
 				continue
-			if check(i[0],j):
-				target = addvec(i[0],j)
-				if target not in visits:
-					visits.append(target)
-					newlocations.append((target,inv(j),i[2]))
+			target = addvec(i[0],j)
+			if target not in visits:
+				visits.append(target)
+				newlocations.append((target,inv(j),i[2]))
 	locations = newlocations
 
 print(steps)
