@@ -1124,7 +1124,6 @@ def crunch(targets,mini):
 	return crunch(targets[1:],newmini)
 
 for x,i in enumerate(data):
-	saved = copy.deepcopy(i)
 	vals = {}
 	for j in list(set(i[1])):
 		vals[j] = search(i[0],j)
