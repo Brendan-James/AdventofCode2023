@@ -1355,7 +1355,7 @@ for x,i in enumerate(data):
 	t = transpose(i)
 	for mid in range(len(t)-1):
 		if check(t,mid):
-			total+=(mid+1)
+			total+=mid+1
 			remember.append((mid,"col"))
 
 print(total)
@@ -1379,6 +1379,6 @@ for x,temp in enumerate(data):
 				if remember[x] == (mid,"col"):
 					continue
 				if check(t,mid):
-					total+=(mid+1)
+					total+=mid+1
 
 print(total//2)
