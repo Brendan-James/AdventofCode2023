@@ -1,5 +1,5 @@
-Time=[56,71,79,99]
-Distance = [334,1135,1350,2430]
+Time=["my input hand processed"]
+Distance = ["my input hand processed"]
 
 total = 1
 for i in range(4):
@@ -12,8 +12,8 @@ for i in range(4):
 
 print(total)
 
-Time=56717999
-Distance = 334113513502430
+Time="my input hand concatenated"
+Distance = "my input hand concatenated"
 total = 0
 for v in range(Time):
 	if v*(Time-v)>Distance:
